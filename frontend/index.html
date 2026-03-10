@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<title>ResumeIQ - AI Resume Analyzer</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gradient-to-r from-indigo-600 to-emerald-500 min-h-screen flex items-center justify-center">
+
+<div class="w-full max-w-4xl bg-white rounded-2xl shadow-2xl p-8">
+
+<h1 class="text-3xl font-bold text-center mb-2">
+AI Resume Analyzer
+</h1>
+
+<p class="text-center text-gray-500 mb-6">
+Smart AI system to evaluate resumes for recruiters
+</p>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+<div>
+
+<label class="font-semibold">Job Description</label>
+
+<textarea id="job_description"
+class="w-full mt-2 p-3 border rounded-lg h-40"
+placeholder="Paste job description here..."></textarea>
+
+<label class="font-semibold mt-4 block">Upload Resume</label>
+
+<input type="file" id="resume"
+class="mt-2">
+
+<button onclick="analyzeResume()"
+class="mt-4 w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700">
+Analyze Resume
+</button>
+
+</div>
+
+<div>
+
+<h2 class="font-semibold mb-2">Match Score</h2>
+
+<div class="w-full bg-gray-200 rounded-full h-6">
+<div id="progress"
+class="bg-green-500 h-6 rounded-full text-white text-center text-sm"
+style="width:0%">
+0%
+</div>
+</div>
+
+<div class="mt-4">
+
+<h3 class="font-semibold">Detected Skills</h3>
+<div id="resume-skills" class="flex flex-wrap gap-2 mt-2"></div>
+
+<h3 class="font-semibold mt-4">Matched Skills</h3>
+<div id="matched-skills" class="flex flex-wrap gap-2 mt-2"></div>
+
+<h3 class="font-semibold mt-4">Missing Skills</h3>
+<div id="missing-skills" class="flex flex-wrap gap-2 mt-2"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
