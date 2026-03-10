@@ -8,7 +8,7 @@ let formData = new FormData()
 formData.append("job_description", jd)
 formData.append("resume", resume)
 
-let response = await fetch("http://127.0.0.1:5000/analyze",{
+let response = await fetch("https://resumeiq.onrender.com/analyze",{
 method:"POST",
 body:formData
 })
